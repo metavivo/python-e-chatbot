@@ -1,0 +1,10 @@
+import  requests 
+from bs4 import BeautifulSoup
+word = input("inserisci una parola inglese: ")
+r = requests.get("https://www.merriam-webster.com/dictionary/{}".format(word))
+
+soup = BeautifulSoup(r.content, "html.parser")
+
+mean = soup.find("span",attrs={"class":"dtText"}).text
+
+print("la definizione inglese di \"" + word + " è" +mean)
