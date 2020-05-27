@@ -1,0 +1,102 @@
+import re
+ 
+#---------------------------------------------
+#         COSTANTI
+
+#**********************************************
+#         FUNZIONI
+
+def cerca_schema(schema, stringa):
+   return bool(re.search(schema, stringa))
+
+#----------------------------------------------
+
+def append(list1, list2):
+   outlist = []
+   for el in list1:
+       outlist.append(el)
+   for el in list2:
+       outlist.append(el)
+   return outlist
+
+#----------------------------------------------
+
+def cdr(inlist):
+   if inlist == []:
+       return inlist
+   else:
+       return inlist[1:len(inlist)]
+ 
+#----------------------------------------------
+ 
+def car(inlist):
+   if inlist == []:
+       return inlist
+   else:
+       return inlist[0]
+      
+#----------------------------------------------
+ 
+def filter(op, inlist):
+   l = inlist
+   accum = []
+   if inlist == []:
+       return inlist
+   else:
+       while len(l) > 0:
+           if op(*[l[0]]):
+               accum = append(accum, list(car(l)))
+           l = cdr(l)
+   return accum
+ 
+#----------------------------------------------
+ 
+def estrai_addendi(domanda):
+ schema1 = "^[Qq]uanto fa ([^ ]+) piu' (.*) *\?$"
+# schema2 = "[Qq]ual è la definizione di (.+)\?"
+ if (cerca_schema(schema1, domanda)):
+   output = re.sub(schema1, "\\1--\\2", domanda)
+   return output
+# elif (cerca_schema(schema2, domanda)):
+#   output = re.sub(schema2, "\\1", domanda)
+#   return output
+ 
+ #----------------------------------------------
+
+def introduzione ():
+  print('Fai una domanda sulla somma')
+  print('oppure scrivi \'ciao\' per terminare:')
+
+ #----------------------------------------------
+
+def converti_parola_numero(parola):
+  if (parola == 'uno'):
+    return 1
+  elif (parola == 'due'):
+    return 2
+  elif (parola == 'tre'):
+    return 3
+
+ #----------------------------------------------
+
+def chatbot ():
+ introduzione()
+ domanda = input()
+ while (domanda != 'ciao'):
+  termine = estrai_addendi(domanda)
+  parole = re.split('--', termine)
+  x = converti_parola_numero(parole[0])
+  y = converti_parola_numero(parole[1])
+  risposta = x + y
+  print(risposta)
+  print('Fai una domanda sulla somma')
+  print('oppure scrivi \'ciao\' per terminare:')
+  domanda = input()
+ print('Ciao e alla prossima!')
+ 
+#**********************************************
+#         ISTRUZIONI
+
+chatbot()
+
+
