@@ -1,0 +1,106 @@
+import re
+ 
+import  requests 
+from bs4 import BeautifulSoup
+
+
+#---------------------------------------------
+#         COSTANTI
+
+
+#**********************************************
+#         FUNZIONI
+
+def cerca_schema(schema, stringa):
+   return bool(re.search(schema, stringa))
+
+#----------------------------------------------
+
+def append(list1, list2):
+   outlist = []
+   for el in list1:
+       outlist.append(el)
+   for el in list2:
+       outlist.append(el)
+   return outlist
+
+#----------------------------------------------
+
+def cdr(inlist):
+   if inlist == []:
+       return inlist
+   else:
+       return inlist[1:len(inlist)]
+ 
+#----------------------------------------------
+ 
+def car(inlist):
+   if inlist == []:
+       return inlist
+   else:
+       return inlist[0]
+      
+#----------------------------------------------
+ 
+def filter(op, inlist):
+   l = inlist
+   accum = []
+   if inlist == []:
+       return inlist
+   else:
+       while len(l) > 0:
+           if op(*[l[0]]):
+               accum = append(accum, list(car(l)))
+           l = cdr(l)
+   return accum
+ 
+#----------------------------------------------
+ 
+def estrai_termine(domanda):
+ schema1 = "[Cc]he significa (.+)\?"
+ schema2 = "[Qq]ual è la definizione di (.+)\?"
+ schema3 = "[Qq]ual è il significato di (.+)\?"
+ schema4 = "[Cc]ome si definisce (.+)\?"
+ schema5 = "[Qq]ual e' la definizione di (.+)\?"
+ schema6 = "[Qq]ual e' il significato di (.+)\?"
+ schema7 = "[Cc]ome definiresti (.+)\?"
+ if (cerca_schema(schema1, domanda)):
+   output = re.sub(schema1, "\\1", domanda)
+   return output
+ elif (cerca_schema(schema2, domanda)):
+   output = re.sub(schema2, "\\1", domanda)
+   return output
+ elif (cerca_schema(schema3, domanda)):
+   output = re.sub(schema3, "\\1", domanda)
+   return output
+ elif (cerca_schema(schema4, domanda)):
+   output = re.sub(schema4, "\\1", domanda)
+   return output
+ elif (cerca_schema(schema5, domanda)):
+   output = re.sub(schema5, "\\1", domanda)
+   return output
+ elif (cerca_schema(schema6, domanda)):
+   output = re.sub(schema6, "\\1", domanda)
+   return output
+ elif (cerca_schema(schema7, domanda)):
+   output = re.sub(schema7, "\\1", domanda)
+   return output
+ else:
+   return "ERRORE"
+ 
+ #----------------------------------------------
+
+def chatbot ():
+  parola = input("inserisci una parola inglese oppure scrivi ciao per uscire: ")
+  while (parola != 'ciao'):
+    r = requests.get("https://www.merriam-webster.com/dictionary/{}".format(parola))
+    soup = BeautifulSoup(r.content, "html.parser")
+    mean = soup.find("span",attrs={"class":"dtText"}).text
+    print("\nla definizione inglese di \"" + parola + " è" +mean)
+    parola = input("\n\n\ninserisci una parola inglese oppure scrivi ciao per uscire: ")
+  print('Ciao e alla prossima!')
+ 
+#**********************************************
+#         ISTRUZIONI
+
+chatbot()
