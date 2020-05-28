@@ -88,6 +88,8 @@ def converti_numero_parola(numero):
     return 'tre'
   elif (numero == 4):
     return 'quattro'
+  else:
+    return numero
 
  #----------------------------------------------
 
@@ -101,7 +103,6 @@ def chatbot ():
   y = converti_parola_numero(parole[1])
   risultato = x + y
   risposta = converti_numero_parola(risultato)
-#  risposta = risultato
   print(risposta)
   print('Fai una domanda sulla somma')
   print('oppure scrivi \'ciao\' per terminare:')
