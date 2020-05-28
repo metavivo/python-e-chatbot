@@ -101,7 +101,7 @@ def chatbot ():
      risposta = filter(lambda x: x[0] == termine , risposte)[1]
      print(risposta)
    else:
-     print(termine + "non è nel mio database.")
+     print(termine + " non è nel mio database.")
    print('Fai una domanda su un concetto di fisica')
    print('oppure scrivi \'ciao\' per terminare:')
    domanda = input()
