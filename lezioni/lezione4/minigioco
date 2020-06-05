@@ -1,0 +1,85 @@
+import random  
+
+#****************************************
+
+def get_random(n):
+    if n == 0:
+        return 0
+    else:
+        return random.randint(0, n - 1)
+
+#****************************************
+
+def presentazione_nome():
+  print("""
+
+INDOVINA IL NUMERO ...
+
+Ciao ! Benvenuto in questo breve minigioco . 
+
+Per inizare vorrei sapere come ti chiami :
+
+""")
+  nome = input()
+  print('Piacere di conoscerti ' + nome + ' . Ora cominicamo il gioco .')                                                                         
+  print("""
+Ti spiego brevemente il gioco e le istruzioni .       
+Questo minigioco genera casualmente un numero compreso tra 1 e 100 .                                
+Hai 7 tentativi per indovinare il numero .            
+Il programma ti dira' solo se il numero che hai inserito e' piu' piccolo o piu' grande del numero da indovinare .             
+""")
+
+  print('Detto questo , ti auguro buona fortuna ' + nome + '!!')                                                                        
+  print("IL GIOCO E' COMINCIATO")
+  return nome
+
+#****************************************
+
+def gioco(nome):
+    num = get_random(100)
+    cont = 1
+    print('Inserisci un numero : ')
+    prova = int(input())
+    while ((prova != num) and cont < 7):
+      # numero troppo piccolo
+      if (prova < num):
+        print("Mi spiace , non e' questo il numero esatto . Il numero che hai inserito e' troppo piccolo ")
+        print('Inserisci un numero : ')
+        prova = int(input())
+      cont = cont + 1
+      # numero troppo grande
+      if (prova > num):
+        print("Mi spiace , non e' questo il numero esatto . Il numero che hai inserito e' troppo grande !")
+        print('Inserisci un numero : ')
+        prova = int(input())
+      # numero indovinato
+      if (prova == num):
+        print("Bravo hai indovinato il numero in .... " + str(cont) + " tentativi Complimenti davvero !! ")
+    if (prova != num):
+      print("Che peccato " + nome + " Non sei riuscito a indovinare il numero in 7 tentativi .")
+      print("Il numero generato casualmente , che era da indovinare , e' " + str(num))
+    print(nome + ", vuoi eseguire il minigioco un'altra volta ? Digita S per si o un qualsiasi altro carattere per uscire : ")
+    uscita = input()
+    return uscita
+
+#****************************************
+
+def saluti(nome):
+  print("""
+Grazie per aver giocato con me ale !                  
+
+CIAONEEE !!   
+  """)
+
+#****************************************
+
+def main():
+  nome = presentazione_nome()
+  continua = 'S'
+  while (continua == 'S'):
+    continua = gioco(nome)
+  saluti(nome)
+
+#########################################
+
+main()
