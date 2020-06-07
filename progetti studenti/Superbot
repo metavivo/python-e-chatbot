@@ -1,0 +1,201 @@
+#****************************************************************
+
+# TITOLO: Esperto empatico
+
+# AUTORI: Stefano Libardi, Teresa Zamboni, Benedetta Pederzolli
+
+#****************************************************************
+
+print('Ciao io mi chiamo Superbot... Tu come ti chiami?')
+nome=input()
+print('''Prego definisci il tuo sesso:
+M = Maschio
+F = Femmina
+N = Non definito''')
+sesso=input()
+if sesso=='M':  
+    print(nome+' ti va di fare un gioco insieme a me?')
+    gioco=input('Scrivi sì o no:  ')
+    if gioco=='sì o no':
+        print('WOW sei davvero intelligente non ci sei cascato!')
+        print('Ora vediamo se te la cavi anche con un problema di matematica!')
+    elif gioco=='si o no':
+        print('Ti ricordo che in italiano devi mettere l\'accento al "sì"')
+        print('''Vabbè dai... sei stato comunque bravo.
+Vediamo se te la cavi con un problema di matematica!''')
+    else:
+        print('Mi dispiace... dovevi scrivere "sì o no". Mi hai deluso!')
+        print('''Vabbè dai... ho cpito che i giochi di parole non fanno per te!
+Vediamo se te la cavi con un problema di matematica!''')
+    print('Anna ha 4 figlie, ogni figlia ha un fratello. Quanti figli ha Anna?')
+    anna=input()
+    if anna=='5':
+        print('WOW in matematica sei davvero ferrato!')
+    else:
+        print('Mi dispiace, ma il Nobel per la matematica è meglio se lo lasci a qualcun\'altro!')
+    print('Ora basta farti domande '+nome+'!')
+    import re
+    print('Prova a farmi una domanda di teoria del tipo "Che significa...?" sull\'argomento "Temperatura e calore"')
+    print('oppure scrivi \'esci\' per terminare:')
+    domanda = input()
+    while (domanda != 'esci'):
+      a = re.sub("[Cc]he significa (.+)\?", "\\1", domanda)
+      print('Hai chiesto il significato di ' + '"' + a + '".')
+      if a=='calore' :
+        print('''Ah questo è facile... il calore è l\'energia scambiata tra due corpi unicamente a causa
+della differenza di temperatura esistente fra di essi''')
+        print('Fai un\'altra domanda del tipo "Che significa...?"')
+      elif a=='capacità termica':
+       print('''Questa non la posso sbagliare perchè l\'ho ripassata proprio ieri...la capacità termica
+di un corpo è la quantità di energia che si deve fornire a esso per aumentare la temperatura di 1K''')
+       print('Fai un\'altra domanda del tipo "Che significa...?"')
+      elif a=='calore specifico':
+        print('''Allora...il calore specifico di una sostanza è la quantità di energia che si
+deve fornire a 1kg di essa per aumentare la temperatura di 1K''')
+        print('Fai un\'altra domanda del tipo "Che significa...?"')
+      elif a=='equilibrio termico':
+          print('''Se non sbaglio dovrebbe essere... due sistemi a contatto termico sono detti
+in equilibrio termico quando le grandezze fisiche che ne caratterizzano lo stato rimangono costanti nel tempo''')
+          print('Fai un\'altra domanda del tipo "Che significa...?"')
+      elif a=='caloria':
+          print('''Mmmm... la caloria è la quantità neccessaria per innalzare la temperatura
+di 1g di acqua da 14.5°C a 15.5°C''')
+          print('Fai un\'altra domanda del tipo "Che significa...?"')
+      elif a=='potere calorifico':
+          print('''la definizione di potere calorifico dovrebbe essere... il potere clorifico è l\'energia
+rilasciata dalla combustione di 1kg di combudtibile''')
+          print('Fai un\'altra domanda del tipo "Che significa...?"')
+      elif a=='calore latente':
+          print('''Sono sincero: questo non lo ho studiato, ma mi sembra che riguardi il trasferimento di energia
+in un passaggio di stato''')
+          print('Fai un\'altra domanda del tipo "Che significa...?"')
+      else:
+        print('Non so rispondere alla tua domanda! Ma ti prego non metterimi 4!')
+        print('Fai un\'altra domanda del tipo "Che significa...?"')
+      print('scrivi \'esci\' per terminare:')
+      domanda = input()
+    print('Ciao, grazie '+nome+' per avermi tenuto compagnia... alla prossima!')
+elif sesso=='F':  
+    print(nome+' ti va di fare un gioco insieme a me?')
+    gioco=input('Scrivi sì o no:  ')
+    if gioco=='sì o no':
+        print('WOW sei davvero intelligente non ci sei cascata!')
+        print('Ora vediamo se te la cavi anche con un problema di matematica!')
+    elif gioco=='si o no':
+        print('Ti ricordo che in italiano devi mettere l\'accento al "sì"')
+        print('''Vabbè dai... sei stata comunque brava.
+Vediamo se te la cavi con un problema di matematica!''')
+    else:
+        print('Mi dispiace... dovevi scrivere "sì o no". Mi hai deluso!')
+        print('''Vabbè dai... ho cpito che i giochi di parole non fanno per te!
+Vediamo se te la cavi con un problema di matematica!''')
+    print('Anna ha 4 figlie, ogni figlia ha un fratello. Quanti figli ha Anna?')
+    anna=input()
+    if anna=='5':
+        print('WOW in matematica sei davvero ferrata!')
+    else:
+        print('Mi dispiace, ma il Nobel per la matematica è meglio se lo lasci a qualcun\'altro!')
+    print('Ora basta farti domande '+nome+'!')
+    import re
+    print('Prova a farmi una domanda di teoria del tipo "Che significa...?" sull\'argomento "Temperatura e calore"')
+    print('oppure scrivi \'esci\' per terminare:')
+    domanda = input()
+    while (domanda != 'esci'):
+      a = re.sub("[Cc]he significa (.+)\?", "\\1", domanda)
+      print('Hai chiesto il significato di ' + '"' + a + '".')
+      if a=='calore' :
+        print('''Ah questo è facile... il calore è l\'energia scambiata tra due corpi unicamente a causa
+della differenza di temperatura esistente fra di essi''')
+        print('Fai un\'altra domanda del tipo "Che significa...?"')
+      elif a=='capacità termica':
+       print('''Questa non la posso sbagliare perchè l\'ho ripassata proprio ieri...la capacità termica
+di un corpo è la quantità di energia che si deve fornire a esso per aumentare la temperatura di 1K''')
+       print('Fai un\'altra domanda del tipo "Che significa...?"')
+      elif a=='calore specifico':
+        print('''Allora...il calore specifico di una sostanza è la quantità di energia che si
+deve fornire a 1kg di essa per aumentare la temperatura di 1K''')
+        print('Fai un\'altra domanda del tipo "Che significa...?"')
+      elif a=='equilibrio termico':
+          print('''Se non sbaglio dovrebbe essere... due sistemi a contatto termico sono detti
+in equilibrio termico quando le grandezze fisiche che ne caratterizzano lo stato rimangono costanti nel tempo''')
+          print('Fai un\'altra domanda del tipo "Che significa...?"')
+      elif a=='caloria':
+          print('''Mmmm... la caloria è la quantità neccessaria per innalzare la temperatura
+di 1g di acqua da 14.5°C a 15.5°C''')
+          print('Fai un\'altra domanda del tipo "Che significa...?"')
+      elif a=='potere calorifico':
+          print('''la definizione di potere calorifico dovrebbe essere... il potere clorifico è l\'energia
+rilasciata dalla combustione di 1kg di combudtibile''')
+          print('Fai un\'altra domanda del tipo "Che significa...?"')
+      elif a=='calore latente':
+          print('''Sono sincero: questo non lo ho studiato, ma mi sembra che riguardi il trasferimento di energia
+in un passaggio di stato''')
+          print('Fai un\'altra domanda del tipo "Che significa...?"')
+      else:
+        print('Non so rispondere alla tua domanda! Ma ti prego non metterimi 4!')
+        print('Fai un\'altra domanda del tipo "Che significa...?"')
+      print('scrivi \'esci\' per terminare:')
+      domanda = input()
+    print('Ciao, grazie '+nome+' per avermi tenuto compagnia... alla prossima!')
+elif sesso=='N':  
+    print(nome+' ti va di fare un gioco insieme a me?')
+    gioco=input('Scrivi sì o no:  ')
+    if gioco=='sì o no':
+        print('WOW sei davvero intelligente non ci sei cascato|a!')
+        print('Ora vediamo se te la cavi anche con un problema di matematica!')
+    elif gioco=='si o no':
+        print('Ti ricordo che in italiano devi mettere l\'accento al "sì"')
+        print('''Vabbè dai... sei stato|a comunque bravo|a.
+Vediamo se te la cavi con un problema di matematica!''')
+    else:
+        print('Mi dispiace... dovevi scrivere "sì o no". Mi hai deluso!')
+        print('''Vabbè dai... ho cpito che i giochi di parole non fanno per te!
+Vediamo se te la cavi con un problema di matematica!''')
+    print('Anna ha 4 figlie, ogni figlia ha un fratello. Quanti figli ha Anna?')
+    anna=input()
+    if anna=='5':
+        print('WOW in matematica sei davvero ferrato|a!')
+    else:
+        print('Mi dispiace, ma il Nobel per la matematica è meglio se lo lasci a qualcun\'altro!')
+    print('Ora basta farti domande '+nome+'!')
+    import re
+    print('Prova a farmi una domanda di teoria del tipo "Che significa...?" sull\'argomento "Temperatura e calore"')
+    print('oppure scrivi \'esci\' per terminare:')
+    domanda = input()
+    while (domanda != 'esci'):
+      a = re.sub("[Cc]he significa (.+)\?", "\\1", domanda)
+      print('Hai chiesto il significato di ' + '"' + a + '".')
+      if a=='calore' :
+        print('''Ah questo è facile... il calore è l\'energia scambiata tra due corpi unicamente a causa
+della differenza di temperatura esistente fra di essi''')
+        print('Fai un\'altra domanda del tipo "Che significa...?"')
+      elif a=='capacità termica':
+       print('''Questa non la posso sbagliare perchè l\'ho ripassata proprio ieri...la capacità termica
+di un corpo è la quantità di energia che si deve fornire a esso per aumentare la temperatura di 1K''')
+       print('Fai un\'altra domanda del tipo "Che significa...?"')
+      elif a=='calore specifico':
+        print('''Allora...il calore specifico di una sostanza è la quantità di energia che si
+deve fornire a 1kg di essa per aumentare la temperatura di 1K''')
+        print('Fai un\'altra domanda del tipo "Che significa...?"')
+      elif a=='equilibrio termico':
+          print('''Se non sbaglio dovrebbe essere... due sistemi a contatto termico sono detti
+in equilibrio termico quando le grandezze fisiche che ne caratterizzano lo stato rimangono costanti nel tempo''')
+          print('Fai un\'altra domanda del tipo "Che significa...?"')
+      elif a=='caloria':
+          print('''Mmmm... la caloria è la quantità neccessaria per innalzare la temperatura
+di 1g di acqua da 14.5°C a 15.5°C''')
+          print('Fai un\'altra domanda del tipo "Che significa...?"')
+      elif a=='potere calorifico':
+          print('''la definizione di potere calorifico dovrebbe essere... il potere clorifico è l\'energia
+rilasciata dalla combustione di 1kg di combudtibile''')
+          print('Fai un\'altra domanda del tipo "Che significa...?"')
+      elif a=='calore latente':
+          print('''Sono sincero: questo non lo ho studiato, ma mi sembra che riguardi il trasferimento di energia
+in un passaggio di stato''')
+          print('Fai un\'altra domanda del tipo "Che significa...?"')
+      else:
+        print('Non so rispondere alla tua domanda! Ma ti prego non metterimi 4!')
+        print('Fai un\'altra domanda del tipo "Che significa...?"')
+      print('scrivi \'esci\' per terminare:')
+      domanda = input()
+    print('Ciao, grazie '+nome+' per avermi tenuto compagnia... alla prossima!')
