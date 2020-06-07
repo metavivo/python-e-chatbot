@@ -1,0 +1,17 @@
+#****************************************************************
+
+# TITOLO: Presentazione
+
+# AUTORI: Nicola Bertacchini
+
+#****************************************************************
+
+print (' Buongiorno e benvenuto nel mio primo programma qui su Python! Prima di tutto, conosciamoci un po. Come ti chiami?')
+nome = input()
+print ( ' Bene. Felice di conoscerti ' + nome)
+print ( ' Io mi chiamo Piergiorgio!')
+print (' Ti va di conoscere un po i miei gusti? Lo spero! Il mio cibo preferito è la pizza.')
+print ( ' Dimmi, a te piace la pizza?')
+cibo = input( ' Preferisco  ')
+print ( 'Anche io adoro ' + cibo)
+print( ' Bene, per oggi è tutto. Cercherò di migliorarmi per rendere la tua esperienza con me straordinaria! Grazie, un saluto.')
