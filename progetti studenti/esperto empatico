@@ -1,0 +1,605 @@
+#****************************************************************
+
+# TITOLO: Esperto empatico
+
+# AUTORI: Maddalena Aste, Flavia Coluccia, Gaia Fontana, Desireè Macinati
+
+#****************************************************************
+
+import time
+#introduzione
+print('ciao')
+time.sleep(0.5)
+print('come va?')
+risposta = input()
+
+if risposta == 'bene':
+  print('sono contento!')
+  time.sleep(0.5)
+  print('hai preso un bel voto di fisica per caso?')
+  risposta = input()
+  if risposta == ('si'):
+    print('bravo, ben fatto!')
+    time.sleep(0.5)
+    print('anche io sono bravo, mettimi alla prova!')
+  elif risposta == ('no'):
+    print('che peccato!')
+    time.sleep(0.5)
+    print('puoi sempre rimediare!')
+  else:
+    print('hahaha')
+    time.sleep(0.5)
+    print('si può sempre migliorare.')
+elif risposta == 'male':
+  print('mi dispiace!')
+  time.sleep(0.5)
+  print('hai per caso una verifica di fisica nei prossimi giorni?')
+  risposta = input()
+  if risposta == ('si'):
+    print('allora ti posso dare una mano volentieri!')
+  elif risposta == ('no'):
+    print('studiare un po\' non ti farà di sicuro male')
+  else:
+    print('farò finta di aver capito')
+else:
+  print('ok, ma parliamo di cose importanti...')
+  time.sleep(0.5)
+  print('come vai in fisica?')
+  risposta = input()
+  if risposta == ('bene'):
+    print('bravo, ma scommetto che puoi fare ancora meglio!')
+  elif risposta == ('male'):
+    print('oh no, dobbiamo rimediare!')
+  else:
+    print('beh dai')
+
+#definizioni
+time.sleep(1)
+print('facciamo un po\' di ripasso!')
+time.sleep(1.5)
+print ('di quale termine vorresti avere la definizione?')
+print('puoi scegliere tra:')
+time.sleep(0.5)
+print('-temperatura')
+time.sleep(0.5)
+print('-calore')
+time.sleep(0.5)
+print('-capacità termica')
+time.sleep(0.5)
+print('-calore specifico')
+time.sleep(0.5)
+print('-calore latente')
+time.sleep(0.5)
+print('-evaporazione')
+time.sleep(0.5)
+print('-ebollizione')
+risposta = input()
+#risposte definizioni
+if risposta == 'temperatura':
+  print('la temperatura di un corpo è il valore indicato da un termometro in equilibrio termico con esso.')
+elif risposta == 'calore':
+  print('il calore è l\'energia scambiata tra due corpi a causa della differenza di temperatura tra essi')
+elif risposta == 'capacità termica':
+  print('la capacità termica è la quntità di energia necessaria per aumentare la temperatura di un corpo di 1K')
+elif risposta == 'calore specifico':
+  print('il calore specifico è la quantità di energia necessaria per aumentare la temperatura di un corpo di 1K')
+elif risposta == 'calore latente':
+  print('il calore latente è la quantità di energia che si deve fornire perchè 1K della sostanza effettui un determinato passaggio di stato')
+elif risposta == 'evaporazione':
+  print('l\'evaporazione è il processo di vaporizzazione che avviene sulla superficie di un liquido')
+elif risposta == 'ebollizione':
+  print('l\'ebollizione è il processo di vaporizzazione che coinvolge l\'intera massa di un liquido')
+else:
+  time.sleep(1)
+  print('scusa non ho capito.')
+
+#ripetizione definizioni
+time.sleep(1)
+print('vuoi un\'altra definizione?')
+risposta = input()
+if risposta == 'si':
+  print('di quale argomento?')
+  risposta = input()
+  if risposta == 'temperatura':
+    print('la temperatura di un corpo è il valore indicato da un termometro in equilibrio termico con esso.')
+  elif risposta == 'calore':
+    print('il calore è l\'energia scambiata tra due corpi a causa della differenza di temperatura tra essi')
+  elif risposta == 'capacità termica':
+    print('la capacità termica è la quntità di energia necessaria per aumentare la temperatura di un corpo di 1K')
+  elif risposta == 'calore specifico':
+    print('il calore specifico è la quantità di energia necessaria per aumentare la temperatura di un corpo di 1K')
+  elif risposta == 'calore latente':
+    print('il calore latente è la quantità di energia che si deve fornire perchè 1K della sostanza effettui un determinato passaggio di stato')
+  elif risposta == 'evaporazione':
+    print('l\'evaporazione è il processo di vaporizzazione che avviene sulla superficie di un liquido')
+  elif risposta == 'ebollizione':
+    print('l\'ebollizione è il processo di vaporizzazione che coinvolge l\'intera massa di un liquido')
+  else:
+    print('scusa non ho capito.')
+elif risposta == 'no':
+  print('ok')
+else:
+  time.sleep(1)
+  print('scusa non ho capito')
+
+#bridge1
+time.sleep(1)
+print('serve altro?')
+risposta = input()
+#formule
+if risposta == 'si':
+  print('vuoi che ti dia una formula?')
+  risposta = input()
+  if risposta == 'no':
+    print('pensaci bene!')
+  elif risposta == 'si':
+    print('quale formula vuoi?')
+    time.sleep(0.5)
+    print('-dilatazione lineare')
+    time.sleep(0.5)
+    print('-dilatazione volumica')
+    time.sleep(0.5)
+    print('-capacità termica')
+    time.sleep(0.5)
+    print('-calore specifico')
+    time.sleep(0.5)
+    print('-calore latente')
+    time.sleep(0.5)
+    print('-equazione del calore')
+    risposta = input()
+    if risposta == ('dilatazione lineare'):
+      print('∆L=λLi∆T')
+    elif risposta == ('dilatazione volumica'):
+      print('V=αVi∆T')
+    elif risposta == ('capacità termica'):
+      print('∆E=C∆T')
+    elif risposta == ('calore specifico'):
+      print('∆E=cm∆T')
+      print('oppure')
+      print('C=cm')
+    elif risposta == ('calore latente'):
+      print('Q=Lm')
+    elif risposta == ('equazione del calore'):
+      print('c1xm1x(Tf-Ti1)=-c2xm2x(Tf-Ti2)')
+    else:
+      time.sleep(1)
+      print('scusa non ho capito.')
+#ripetizione formula
+    time.sleep (1)
+    print('vuoi un\'altra formula?')
+    risposta = input()
+    if risposta == 'no':
+      print('ok!')
+    elif risposta == 'si':
+      print('quale formula vuoi?')
+      time.sleep(1)
+      print('-dilatazione lineare')
+      time.sleep(0.5)
+      print('-dilatazione volumica')
+      time.sleep(0.5)
+      print('-capacità termica')
+      time.sleep(0.5)
+      print('-calore specifico')
+      time.sleep(0.5)
+      print('-calore latente')
+      time.sleep(0.5)
+      print('-equazione del calore')
+      risposta = input()
+      if risposta == ('dilatazione lineare'):
+        print('∆L=λLi∆T')
+      elif risposta == ('dilatazione volumica'):
+        print('V=αVi∆T')
+      elif risposta == ('capacità termica'):
+        print('∆E=C∆T')
+      elif risposta == ('calore specifico'):
+        print('∆E=cm∆T')
+        print('oppure')
+        print('C=cm')
+      elif risposta == ('calore latente'):
+        print('Q=Lm')
+      elif risposta == ('equazione del calore'):
+        print('c1xm1x(Tf-Ti1)=-c2xm2x(Tf-Ti2)')
+      else:
+        time.sleep(1)
+        print('scusa non ho capito.')
+
+elif risposta == 'no':
+  print('pensaci bene!')
+else:
+  time.sleep(1)
+  print('scusa non ho capito')
+#bridge2
+time.sleep(1)
+print('serve qualcos\'altro?')
+risposta = input()
+#problemi
+if risposta == 'si':
+  print('vuoi che ti dia un problema?')
+elif risposta == 'no':
+  print('ok ciao, alla prossima!')
+  exit()
+else:
+  print('vuoi che ti dia un problema?')
+
+risposta = input()
+#argomenti problemi
+if risposta == 'no':
+  print('ok vabbene ciao')
+  exit()
+elif risposta == 'si':
+  print('su quale argomento?')
+  time.sleep(0.7)
+print('-dilatazione lineare')
+time.sleep(0.5)
+print('-dilatazione volumica')
+time.sleep(0.5)
+print('-capacità termica')
+time.sleep(0.5)
+print('-calore specifico')
+time.sleep(0.5)
+print('-calore latente')
+time.sleep(0.5)
+print('-equazione del calore')
+time.sleep(0.5)
+print('-passaggio di stato')
+
+#problemi risposte
+risposta = input()
+if risposta == 'dilatazione lineare':
+  print('L’osservatorio astronomico di Monte Palomar (USA) è costituito da un grande specchio in materiale vetro Pyrex che ha un diametro di 508 cm.L’escursione termica relativa alla zona di Monte Palomar varia da una temperatura minima di -10°C (durante i mesi invernali) a una temperatura (durante i mesi estivi) di 50°C.Determinare la variazione massima del diametro dello specchio.Si sappia che il coefficiente di dilatazione lineare del vetro Pyrex vale 3,3∙10-6 °C-1.')
+  time.sleep(1)
+  print('risposte:')
+  time.sleep(0.5)
+  print('1. 0,1 cm')
+  time.sleep(0.5)
+  print('2. 1 cm')
+  time.sleep(0.5)
+  print('3. 10 cm')
+  risposta = input()
+  if risposta == '1':
+    print('corretto!')
+  elif risposta == '2':
+    print('sbagliato!')
+    print('la risposta corretta è la n°1!')
+  elif risposta == '3':
+    print('sbagliato!')
+    print('la risposta corretta è la n°1!')
+  else:
+    time.sleep(1)
+    print('scusa non ho capito, comunque la risposta corretta è la 1')
+#fatto
+elif risposta == 'dilatazione volumica':
+  print('Un cilindro lungo 21 cm ha un diametro di base di 1,8 cm.Sapendo che il volume del cilindro subisce una variazione di 0,10 cm3 quando è portato da 10°C a 80°C, determinare la natura del materiale di cui è composto.')
+  time.sleep(1)
+  print('risposte:')
+  time.sleep(0.5)
+  print('1. piombo')
+  time.sleep(0.5)
+  print('2. ferro')
+  time.sleep(0.5)
+  print('3. vetro')
+  risposta = input()
+  if risposta == '3':
+    print('corretto!')
+  elif risposta == '2':
+    print('sbagliato!')
+    print('la risposta corretta è la n°3!')
+  elif risposta == '1':
+    print('sbagliato!')
+    print('la risposta corretta è la n°3!')
+  else:
+    print('scusa non ho capito, comunque la risposta corretta è la 3')
+#fatto
+elif risposta == 'capacità termica':
+  print('Fornendo 6279 J di calorie a 1500 grammi di acqua distillata, ne aumentiamo la sua temperatura di 1K. determina la capacità termica del campione di acqua.')
+  time.sleep(1)
+  print('risposte:')
+  time.sleep(0.5)
+  print('1. 6279 J/K')
+  time.sleep(0.5)
+  print('2. 6254 J/K')
+  time.sleep(0.5)
+  print('3. 6457 J/K')
+  risposta = input()
+  if risposta == '1':
+    print('corretto!')
+  elif risposta == '2':
+    print('sbagliato!')
+    print('la risposta corretta è la n°1!')
+  elif risposta == '3':
+    print('sbagliato!')
+    print('la risposta corretta è la n°1!')
+  else:
+    time.sleep(1)
+    print('scusa non ho capito, comunque la risposta corretta è la 1')
+#fatto
+elif risposta == 'calore specifico':
+  print('Calcolare il calore specifico del piombo sapendo che un campione di 150.0 g di piombo alla temperatura di 100.0 °C viene immerso in 50.0 grammi di acqua alla temperatura di 22.0 °C e che la temperatura finale del sistema piombo-acqua è di 28.8 °C.')
+  time.sleep(1)
+  print('risposte:')
+  time.sleep(0.5)
+  print('1. 0.243 J/g°C')
+  time.sleep(0.5)
+  print('2. 0.133 J/g°C')
+  time.sleep(0.5)
+  print('3. 0.311 J/g°C')
+  risposta = input()
+  if risposta == '2':
+    print('corretto!')
+  elif risposta == '1':
+    print('sbagliato!')
+    print('la risposta corretta è la n°2!')
+  elif risposta == '3':
+    print('sbagliato!')
+    print('la risposta corretta è la n°2!')
+  else:
+    time.sleep(1)    
+    print('scusa non ho capito, comunque la risposta corretta è la 2')
+#fatto
+elif risposta == ('equazione del calore'):
+  print('Un blocchetto di ferro di massa 50,0 dag inizialmente alla temperatura di 145,0 °C viene immerso in 2,50 hg d\'acqua alla temperatura di 20,0 °C. Sapendo che il calore specifico del ferro è 452 J/kg*°C e non considerando eventuali dispersioni termiche, calcola la temperatura di equilibrio alla quale si stabilizzerà il sistema')
+  time.sleep(1)
+  print('risposte:')
+  time.sleep(0.5)
+  print('1. 40,5 °C')
+  time.sleep(0.5)
+  print('2. 42,2 °C')
+  time.sleep(0.5)
+  print('3. 41,3 °C')
+  risposta = input()
+  if risposta == '2':
+    print('corretto!')
+  elif risposta == '1':
+    print('sbagliato!')
+    print('la risposta corretta è la n°2!')
+  elif risposta == '3':
+    print('sbagliato!')
+    print('la risposta corretta è la n°2!')
+  else:
+    time.sleep(1)
+    print('scusa non ho capito, comunque la risposta corretta è la 2')
+
+elif risposta == ('calore latente'):
+  print('Una massa di 2 kg di un solido non noto assorbe una quantità di calore pari a 418600 J.Sapendo che il solido aveva raggiunto la temperatura di fusione e che a causa dell’energia assorbita liquefa totalmente, calcola il suo calore latente di fusione.')
+  time.sleep(1)
+  print('risposte:')
+  time.sleep(0.5)
+  print('1. 259000 J / kg')
+  time.sleep(0.5)
+  print('2. 210400 J / kg')
+  time.sleep(0.5)
+  print('3. 209300 J / kg')
+  risposta = input()
+  if risposta == '3':
+    print('corretto!')
+  elif risposta == '2':
+    print('sbagliato!')
+    print('la risposta corretta è la n°3!')
+  elif risposta == '1':
+    print('sbagliato!')
+    print('la risposta corretta è la n°3!')
+  else:
+    time.sleep(1)
+    print('scusa non ho capito, comunque la risposta corretta è la 3')
+
+elif risposta == 'passaggio di stato':
+  print('Un blocco di ghiaccio di 3 kg alla temperatura di 0 °C fonde completamente. Quanto calore ha assorbito? ')
+  time.sleep(1)
+  print('risposte:')
+  time.sleep(0.5)
+  print('1. 997200 J')
+  time.sleep(0.5)
+  print('2. 985100 J')
+  time.sleep(0.5)
+  print('3. 953400 J')
+  risposta = input()
+  if risposta == '1':
+    print('corretto!')
+  elif risposta == '2':
+    print('sbagliato!')
+    print('la risposta corretta è la n°1!')
+  elif risposta == '3':
+    print('sbagliato!')
+    print('la risposta corretta è la n°1!')
+  else:
+    time.sleep(1)
+    print('scusa non ho capito, comunque la risposta corretta è la 1')
+#ripetizione problemi
+time.sleep(1)
+print('vuoi un altro problema?')
+risposta = input()
+if risposta == 'no':
+  print('ok, ciao alla prossima!')
+  exit()
+if risposta == 'si':
+  print('ok!')
+  #incollo
+  time.sleep(0.5)
+  print('su quale argomento?')
+  time.sleep(0.5)
+print('-dilatazione lineare')
+time.sleep(0.5)
+print('-dilatazione volumica')
+time.sleep(0.5)
+print('-capacità termica')
+time.sleep(0.5)
+print('-calore specifico')
+time.sleep(0.5)
+print('-calore latente')
+time.sleep(0.5)
+print('-equazione del calore')
+time.sleep(0.5)
+print('-passaggio di stato')
+
+#problemi risposte
+risposta = input()
+if risposta == 'dilatazione lineare':
+  print('L’osservatorio astronomico di Monte Palomar (USA) è costituito da un grande specchio in materiale vetro Pyrex che ha un diametro di 508 cm.L’escursione termica relativa alla zona di Monte Palomar varia da una temperatura minima di -10°C (durante i mesi invernali) a una temperatura (durante i mesi estivi) di 50°C.Determinare la variazione massima del diametro dello specchio.Si sappia che il coefficiente di dilatazione lineare del vetro Pyrex vale 3,3∙10-6 °C-1.')
+  time.sleep(1)
+  print('risposte:')
+  time.sleep(0.5)
+  print('1. 0,1 cm')
+  time.sleep(0.5)
+  print('2. 1 cm')
+  time.sleep(0.5)
+  print('3. 10 cm')
+  risposta = input()
+  if risposta == '1':
+    print('corretto!')
+  elif risposta == '2':
+    print('sbagliato!')
+    print('la risposta corretta è la n°1!')
+  elif risposta == '3':
+    print('sbagliato!')
+    print('la risposta corretta è la n°1!')
+  else:
+    time.sleep(1)
+    print('scusa non ho capito, comunque la risposta corretta è la 1')
+#fatto
+elif risposta == 'dilatazione volumica':
+  print('Un cilindro lungo 21 cm ha un diametro di base di 1,8 cm.Sapendo che il volume del cilindro subisce una variazione di 0,10 cm3 quando è portato da 10°C a 80°C, determinare la natura del materiale di cui è composto.')
+  time.sleep(1)
+  print('risposte:')
+  time.sleep(0.5)
+  print('1. piombo')
+  time.sleep(0.5)
+  print('2. ferro')
+  time.sleep(0.5)
+  print('3. vetro')
+  risposta = input()
+  if risposta == '3':
+    print('corretto!')
+  elif risposta == '2':
+    print('sbagliato!')
+    print('la risposta corretta è la n°3!')
+  elif risposta == '1':
+    print('sbagliato!')
+    print('la risposta corretta è la n°3!')
+  else:
+    time.sleep(1)
+    print('scusa non ho capito, comunque la risposta corretta è la 3')
+#fatto
+elif risposta == 'capacità termica':
+  print('Fornendo 6279 J di calorie a 1500 grammi di acqua distillata, ne aumentiamo la sua temperatura di 1K. determina la capacità termica del campione di acqua.')
+  time.sleep(1)
+  print('risposte:')
+  time.sleep(0.5)
+  print('1. 6279 J/K')
+  time.sleep(0.5)
+  print('2. 6254 J/K')
+  time.sleep(0.5)
+  print('3. 6457 J/K')
+  risposta = input()
+  if risposta == '1':
+    print('corretto!')
+  elif risposta == '2':
+    print('sbagliato!')
+    print('la risposta corretta è la n°1!')
+  elif risposta == '3':
+    print('sbagliato!')
+    print('la risposta corretta è la n°1!')
+  else:
+    time.sleep(1)
+    print('scusa non ho capito, comunque la risposta corretta è la 1')
+#fatto
+elif risposta == 'calore specifico':
+  print('Calcolare il calore specifico del piombo sapendo che un campione di 150.0 g di piombo alla temperatura di 100.0 °C viene immerso in 50.0 grammi di acqua alla temperatura di 22.0 °C e che la temperatura finale del sistema piombo-acqua è di 28.8 °C.')
+  time.sleep(1)
+  print('risposte:')
+  time.sleep(0.5)
+  print('1. 0.243 J/g°C')
+  time.sleep(0.5)
+  print('2. 0.133 J/g°C')
+  time.sleep(0.5)
+  print('3. 0.311 J/g°C')
+  risposta = input()
+  if risposta == '2':
+    print('corretto!')
+  elif risposta == '1':
+    print('sbagliato!')
+    print('la risposta corretta è la n°2!')
+  elif risposta == '3':
+    print('sbagliato!')
+    print('la risposta corretta è la n°2!')
+  else:
+    time.sleep(1)
+    print('scusa non ho capito, comunque la risposta corretta è la 2')
+#fatto
+elif risposta == ('equazione del calore'):
+  print('Un blocchetto di ferro di massa 50,0 dag inizialmente alla temperatura di 145,0 °C viene immerso in 2,50 hg d\'acqua alla temperatura di 20,0 °C. Sapendo che il calore specifico del ferro è 452 J/kg*°C e non considerando eventuali dispersioni termiche, calcola la temperatura di equilibrio alla quale si stabilizzerà il sistema')
+  time.sleep(1)
+  print('risposte:')
+  time.sleep(0.5)
+  print('1. 40,5 °C')
+  time.sleep(0.5)
+  print('2. 42,2 °C')
+  time.sleep(0.5)
+  print('3. 41,3 °C')
+  risposta = input()
+  if risposta == '2':
+    print('corretto!')
+  elif risposta == '1':
+    print('sbagliato!')
+    print('la risposta corretta è la n°2!')
+  elif risposta == '3':
+    print('sbagliato!')
+    print('la risposta corretta è la n°2!')
+  else:
+    time.sleep(1)
+    print('scusa non ho capito, comunque la risposta corretta è la 2')
+
+elif risposta == ('calore latente'):
+  print('Una massa di 2 kg di un solido non noto assorbe una quantità di calore pari a 418600 J.Sapendo che il solido aveva raggiunto la temperatura di fusione e che a causa dell’energia assorbita liquefa totalmente, calcola il suo calore latente di fusione.')
+  time.sleep(1)
+  print('risposte:')
+  time.sleep(0.5)
+  print('1. 259000 J / kg')
+  time.sleep(0.5)
+  print('2. 210400 J / kg')
+  time.sleep(0.5)
+  print('3. 209300 J / kg')
+  risposta = input()
+  if risposta == '3':
+    print('corretto!')
+  elif risposta == '2':
+    print('sbagliato!')
+    print('la risposta corretta è la n°3!')
+  elif risposta == '1':
+    print('sbagliato!')
+    print('la risposta corretta è la n°3!')
+  else:
+    time.sleep(1)
+    print('scusa non ho capito, comunque la risposta corretta è la 3')
+
+elif risposta == 'passaggio di stato':
+  print('Un blocco di ghiaccio di 3 kg alla temperatura di 0 °C fonde completamente. Quanto calore ha assorbito? ')
+  time.sleep(1)
+  print('risposte:')
+  time.sleep(0.5)
+  print('1. 997200 J')
+  time.sleep(0.5)
+  print('2. 985100 J')
+  time.sleep(0.5)
+  print('3. 953400 J')
+  risposta = input()
+  if risposta == '1':
+    print('corretto!')
+  elif risposta == '2':
+    print('sbagliato!')
+    print('la risposta corretta è la n°1!')
+  elif risposta == '3':
+    print('sbagliato!')
+    print('la risposta corretta è la n°1!')
+  else:
+    time.sleep(1)
+    print('scusa non ho capito, comunque la risposta corretta è la 1')
+
+
+
+
+
+#fine
+print('si è fatto tardi!')
+time.sleep(0.7)
+print('arrivederci e alla prossima!')
+exit()
