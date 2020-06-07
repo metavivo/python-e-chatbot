@@ -1,0 +1,376 @@
+#****************************************************************
+
+# TITOLO: Mimì
+
+# AUTORI: Arianna Ferraresi, Jacopo Guardini, Beatrice Facchinelli, Francesco Zatelli
+
+#****************************************************************
+
+a=input('Ciao! Come ti chiami?  ')
+
+print('Piacere, ' + a + '. Io mi chiamo Mimì')
+
+l = """
+Come stai?  """
+
+risposta = input(l)
+
+if (risposta == 'bene'):
+   print('Ne sono felice!')
+if (risposta == 'bene, e tu?'):
+   print('Ne sono felice! Io sto molto bene, grazie.')
+if (risposta == 'male'):
+   m=input('Come mai?  ')
+   print('Mi dispiace, vedrai che andrà tutto bene!')
+if(risposta == 'male, e tu?'):
+   print('Io sto sempre bene!')
+   m=input('Come mai stai male?  ')
+   print('Mi dispiace, vedrai che andrà tutto bene!')
+print('   ')
+
+
+s = input('Qual è il tuo colore preferito?  ')
+
+print(s + ', anche a me piace molto!')
+
+
+if((s == 'rosso') or (s == 'il rosso')):
+      barzelletta0 = 'Cosa fa un delfino nel deserto? ..... Muore'
+      print('mi fa venire in mente questa barzelletta :  ' + barzelletta0)
+   
+if((s == 'blu') or (s == 'il blu')):
+   barzelletta1 = 'Qual è il cane più cattivo? ..... la can-aglia'
+   print('mi fa venire in mente questa barzelletta :  ' + barzelletta1)
+   
+if((s == 'rosa') or (s == 'il rosa')):
+   barzelletta2 = 'Cosa fanno otto cani al mare? ..... il canotto'
+   print('mi fa venire in mente questa barzelletta :  ' + barzelletta2)
+   
+if((s == 'giallo') or (s == 'il giallo')):
+   barzelletta3 = 'Un uomo entra in un caffè.  SPLASH'
+   print('mi fa venire in mente questa barzelletta :  ' + barzelletta3)
+   
+if((s == 'viola') or (s == 'il viola')):
+   barzelletta4 = 'Chiude una lavanderia.  Faceva affari sporchi'
+   print('mi fa venire in mente questa barzelletta :  ' + barzelletta4)
+   
+if((s == 'verde') or (s == 'il verde')):
+   barzelletta5 = 'Che cosa fa un gallo in chiesa? ..... il chicchirichetto'
+   print('mi fa venire in mente questa barzelletta :  ' + barzelletta5)
+   
+if((s == 'arancione') or (s == 'l\'arancione')):
+   barzelletta6 = 'Qual è la città preferita dai ragni? ..... Mosca'
+   print('mi fa venire in mente questa barzelletta :  ' + barzelletta6)
+   
+if((s == 'bianco') or (s == 'il bianco')):
+   barzelletta7 = 'Dottore,dottore!Ho solo 59 minuti di vita, mi aiuti!    Certo, un minuto e sono da lei!'
+   print('mi fa venire in mente questa barzelletta :  ' + barzelletta7)
+   
+if((s == 'nero') or (s == 'il nero')):
+   barzelletta8 = 'Mamma lumaca prepara sua figlia per andare a scuola e le dice:  mi raccomando fai la bava!'
+   print('mi fa venire in mente questa barzelletta :  ' + barzelletta8)
+   
+if((s != 'rosso') and (s != 'blu') and (s != 'rosa') and (s != 'giallo') and (s != 'viola') and (s != 'verde') and (s != 'arancione') and (s != 'bianco') and (s != 'nero') and (s != 'il rosso') and (s != 'il blu') and (s != 'il rosa') and (s != 'il giallo') and (s != 'il viola') and (s != 'il verde') and (s != 'l\'arancione') and (s != 'il bianco') and (s != 'il nero')):
+   barzelletta9 = 'Ha chiuso una fabbrica di carta igienica, è andato tutto a rotoli'
+   print('mi fa venire in mente questa barzelletta :  ' + barzelletta9)
+
+print('   ')
+
+
+
+
+input('Quanti anni hai?  ')
+
+print('Io ho poche settimane di vita, o meglio di programmazione. Ahahahah ')
+
+print('   ')
+
+
+
+rispostaa = input('ti piace la tua scuola?  ')
+
+if(rispostaa == 'no'):
+   print('Peccato! Forse dovresti cambiare...')
+else:
+   print('Bene!!!')
+   cc= input('Che scuola fai?  ')
+   print(cc + '?  Wow!')
+
+print('   ')
+   
+
+
+
+
+import re
+
+ 
+
+def cerca_schema(schema, stringa):
+
+   return bool(re.search(schema, stringa))
+
+ 
+
+def append(list1, list2):
+
+   outlist = []
+
+   for el in list1:
+
+       outlist.append(el)
+
+   for el in list2:
+
+       outlist.append(el)
+
+   return outlist
+
+ 
+
+def cdr(inlist):
+
+   if inlist == []:
+
+       return inlist
+
+   else:
+
+       return inlist[1:len(inlist)]
+
+ 
+
+ 
+
+def car(inlist):
+
+   if inlist == []:
+
+       return inlist
+
+   else:
+
+       return inlist[0]
+
+      
+
+ 
+
+def filter(op, inlist):
+
+   l = inlist
+
+   accum = []
+
+   if inlist == []:
+
+       return inlist
+
+   else:
+
+       while len(l) > 0:
+
+           if op(*[l[0]]):
+
+               accum = append(accum, list(car(l)))
+
+           l = cdr(l)
+
+   return accum
+
+ 
+
+ 
+
+def estrai_termine(domanda):
+
+ schema1 = "[Cc]he significa (.+)\?"
+
+ schema2 = "[Qq]ual è la definizione di (.+)\?"
+
+ schema3 = "[Qq]ual è il significato di (.+)\?"
+
+ schema4 = "[Cc]ome si definisce (.+)\?"
+
+ schema5 = "[Qq]ual e' la definizione di (.+)\?"
+
+ schema6 = "[Qq]ual e' il significato di (.+)\?"
+
+ schema7 = "[Cc]ome definiresti (.+)\?"
+ 
+ schema8 = "[Cc]os'è (.+)\?"
+
+ schema9 = "[Cc]osa significa (.+)\?"
+
+ if (cerca_schema(schema1, domanda)):
+
+   output = re.sub(schema1, "\\1", domanda)
+
+   return output
+
+ elif (cerca_schema(schema2, domanda)):
+
+   output = re.sub(schema2, "\\1", domanda)
+
+   return output
+
+ elif (cerca_schema(schema3, domanda)):
+
+   output = re.sub(schema3, "\\1", domanda)
+
+   return output
+
+ elif (cerca_schema(schema4, domanda)):
+
+   output = re.sub(schema4, "\\1", domanda)
+
+   return output
+
+ elif (cerca_schema(schema5, domanda)):
+
+   output = re.sub(schema5, "\\1", domanda)
+
+   return output
+
+ elif (cerca_schema(schema6, domanda)):
+
+   output = re.sub(schema6, "\\1", domanda)
+
+   return output
+
+ elif (cerca_schema(schema7, domanda)):
+
+   output = re.sub(schema7, "\\1", domanda)
+
+   return output
+
+ elif (cerca_schema(schema8, domanda)):
+
+   output = re.sub(schema8, "\\1", domanda)
+
+   return output
+
+ elif (cerca_schema(schema9, domanda)):
+
+   output = re.sub(schema9, "\\1", domanda)
+
+   return output
+
+ else:
+
+   return "ERRORE"
+
+
+
+termini = ['energia', 'lavoro', 'energia cinetica', 'energia potenziale', 'temperatura', 'calore', 'forza conservativa']
+
+risposte = [['energia', "L'energia è la capacità di compiere un lavoro."], ['lavoro', 'Il lavoro si definisce come forza per spostamento.'], ['energia cinetica', 'La forza cinetica di un corpo equivale al lavoro necessario ad accelerare il corpo da una velocità nulla alla sua velocità'], ['energia potenziale', 'energia potenziale di un oggetto è energia che esso possiede a causa della sua posizione o del suo orientamento rispetto ad un campo di forze'], ['temperatura', 'la temperatura è la grandezza fisica associata alle sensazioni di caldo e di freddo. Si misura attraverso il termometro'], ['calore', 'il calore è trasferimento di energia collegato a variazioni di temperatura e passaggi di stato'], ['forza conservativa', 'una forza è conservativa se il lavoro svolto non dipende dal percorso ma solo dal punto di partenza e quello di arrivo oppure se il lavoro da essa compiuto lungo un percorso chiuso è nullo']]
+
+
+ 
+print('Ora parliamo un pò di FISICA!!! Fai una domanda su un concetto')
+
+print('oppure scrivi \'fine\' per terminare:')
+
+domanda = input()
+
+while (domanda != 'fine'):
+
+   termine = estrai_termine(domanda)
+
+   if (termine == "ERRORE"):
+
+     print('Non ho capito la domanda!')
+
+   elif termine in termini:
+
+     risposta = filter(lambda x: x[0] == termine , risposte)[1]
+
+     print(risposta)
+
+   else:
+
+     print(termine + " non è nel mio database.")
+
+   print('Fai una domanda su un concetto di fisica')
+
+   print('oppure scrivi \'fine\' per terminare:')
+
+   domanda = input()
+
+print('Abbiamo finito con le definizioni!')
+print('   ')
+
+
+
+rs = input('Vuoi che io ti faccia delle domande per capire se hai studiato abbastanza?  ')
+
+if(rs == 'si'):
+   bi = input('come si chiama il passaggio di stato da solido a liquido?  ')
+   if(bi == 'fusione'):
+      print('CORRETTO!')
+   else:
+      print('SBAGLIATO! La risposta era FUSIONE')
+   print('   ')
+   ci = input('come si chiama il passaggio di stato da solido a aeriforme?  ')
+   if(ci == 'sublimazione'):
+      print('CORRETTO!')
+   else:
+      print('SBAGLIATO! La risposta era SUBLIMAZIONE')
+   print('   ')
+   di = input('il termometro è un termoscopio con la scala graduata. Vero o falso?  ')
+   if(di == 'vero'):
+      print('CORRETTO!')
+   else:
+      print('SBAGLIATO! In realtà è vero')
+   print('   ')
+   ei = input('come si chiama il passaggio di stato da aeriforme a liquido?  ')
+   if(ei == 'condensazione'):
+      print('CORRETTO!')
+   else:
+      print('SBAGLIATO! La risposta era CONDENSAZIONE')
+   print('   ')
+   fi = input('la forza d\'attrito è una forza convervativa?  ')
+   if(fi == 'no'):
+      print('CORRETTO!')
+   else:
+      print('SBAGLIATO! La forza d\'attrito non è conservativa')
+   print('   ')
+   gi = input('la centrale idroelettrica utilizza l\'energia cinetica. Vero o falso?  ')
+   if(gi == 'vero'):
+      print('CORRETTO!')
+   else:
+      print('SBAGLIATO! In realtà è vero')
+   print('   ')
+   hi = input('Il fascio luminoso si studia in meccanica. Vero o falso?  ')
+   if(hi == 'falso'):
+      print('CORRETTO!')
+   else:
+      print('SBAGLIATO! In realtà è falso')
+   print('   ')
+   ii = input('I corpi rigidi si studiano in ottica. Vero o falso?  ')
+   if(ii == 'falso'):
+      print('CORRETTO!')
+   else:
+      print('SBAGLIATO! In realtà è falso')
+   print('   ')
+   ji = input('Completa con una parola la seguente frase: il lavoro di una forza conservativa lungo un percorso chiuso è _ _ _ _ _  ')
+   if(ji == 'nullo'):
+      print('CORRETTO!')
+   else:
+      print('SBAGLIATO! Il lavoro è NULLO')
+   print('   ')
+   ki = input('Completa con una parola la seguente frase: il punto materiale è un corpo le cui dimensioni sono _ _ _ _ _ _ _ _ _ _ _ _ rispetto allo spazio in cui il corpo è libero di muoversi  ')
+   if(ki == 'trascurabili'):
+      print('CORRETTO!')
+   else:
+      print('SBAGLIATO! Le dimensioni sono TRASCURABILI')
+   print('   ')
+
+   print('Abbiamo finito la tua interrogazione!')
+
+
+   
+if(rs == 'no'):
+   input('Allora scrivi \'arrivederci\' per terminare  ')
+print ('Ciao e alla prossima!')
