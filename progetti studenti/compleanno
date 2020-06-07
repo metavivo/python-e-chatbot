@@ -1,0 +1,27 @@
+#****************************************************************
+
+# TITOLO: Compleanno
+
+# AUTORE: Andrea Fiorazzo
+
+#****************************************************************
+
+e=input("In quale mese siamo?  ")
+f=int(input("Che giorno è oggi?  "))
+a=int(input("Ehi! Quanti anni hai?  "))
+      
+b=input('In che mese sei nato?  ')
+      
+      
+mesediz={"gennaio":1,"febbraio":2,"marzo":3,"aprile":4,"maggio":5,"giugno":6,"luglio":7,"agosto":8,"settembre":9,"ottobre":10,"novembre":11,"dicembre":12}
+d=int(input("Che giorno sei nato?  "))
+if mesediz.get(b)<mesediz.get(e):
+    c=2020-a
+if mesediz.get(b)==mesediz.get(e):
+      if d<=f:
+         c=2020-a
+      else:
+         c=2020-a-1
+if mesediz.get(b)>mesediz.get(e):
+    c=2020-a-1
+print("Allora sei nato il", d, b, "del", c)
